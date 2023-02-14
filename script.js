@@ -28,4 +28,9 @@ function operate(operator, a, b) {
     }
 }
 
+let displayValue = 0;
+
+const screen = document.querySelector('.screen');
+
+const digits = document.querySelectorAll('.digit');
 //
