@@ -28,9 +28,9 @@ function operate(operator, a, b) {
     }
 }
 
-const firstValue = 0;
-const secondValue = 0;
-const operator = '';
+let value = '';
+//let secondValue = 0;
+let operator = '';
 
 const screen = document.querySelector('.screen');
 
@@ -39,10 +39,13 @@ const buttons = document.querySelectorAll('button');
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        alert(button.id);
         if (button.className === 'digit') {
             console.log(button.id);
-
+            value += button.id;
+            screen.textContent = value;
+        } else if (button.className === 'operator') {
+            value = '';
+            operator = button.id;
             screen.textContent = button.id;
         }
     });
