@@ -28,12 +28,22 @@ function operate(operator, a, b) {
     }
 }
 
-let displayValue = 0;
+const firstValue = 0;
+const secondValue = 0;
+const operator = '';
 
 const screen = document.querySelector('.screen');
 
-const digits = document.querySelectorAll('.digit');
 
-digits.forEach(digit => {
+const buttons = document.querySelectorAll('button');
 
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        alert(button.id);
+        if (button.className === 'digit') {
+            console.log(button.id);
+
+            screen.textContent = button.id;
+        }
+    });
 });
