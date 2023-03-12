@@ -29,10 +29,11 @@ function operate(operator, a, b) {
 }
 
 let value = '';
-//let secondValue = 0;
 let operator = '';
+let space = ' ';
 
-const screen = document.querySelector('.screen');
+const inputScreen = document.querySelector('.input-screen');
+const evalScreen = document.querySelector('eval-screen');
 
 
 const buttons = document.querySelectorAll('button');
@@ -42,11 +43,11 @@ buttons.forEach((button) => {
         if (button.className === 'digit') {
             console.log(button.id);
             value += button.id;
-            screen.textContent = value;
+            inputScreen.textContent = value;
         } else if (button.className === 'operator') {
-            value = '';
-            operator = button.id;
-            screen.textContent = button.id;
-        }
+            operator = button.id + space;
+            value += space + operator;
+            inputScreen.textContent = value;
+        } // elfe is button === 'equals'
     });
 });
