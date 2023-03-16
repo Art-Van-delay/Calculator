@@ -18,7 +18,8 @@ function operateOnArray(array) {
 // Placeholder variables
 let value = '';
 let operator = '';
-let space = ' ';
+const space = ' ';
+let array = [];
 
 // Document selectors
 const inputScreen = document.querySelector('.input-screen');
